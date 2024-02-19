@@ -14,16 +14,14 @@ html, body {
     background: var(--background);
 }
 
-#nav-toggle:checked &~#nav-header {
+#nav-toggle:checked ~ #nav-header {
     width: calc(var(--navbar-width-min)) -16px;
 }
-
-&~#nav-content,
-&~#nav-footer {
+#nav-toggle:checked ~ #nav-content #nav-footer {
     width: var(--navbar-width-min);
 }
 
-&~#nav-header #nav-title {
+#nav-toggle:checked ~ #nav-header #nav-title {
     opacity: 0;
     pointer-events: none;
     transition: opacity .1s;
