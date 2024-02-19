@@ -27,29 +27,29 @@ html, body {
     transition: opacity .1s;
 }
 
-label[for="nav-toggle"] {
+#nav-toggle:checked ~ #nav-header label[for="nav-toggle"] {
     left: calc(50% - 8px);
     transform: translate(-50%);
 }
 
-#nav-toggle-burger {
+#nav-toggle:checked ~ #nav-header #nav-toggle-burger {
     background: var(--navbar-light-primary);
 }
 
-&:before,
-&:after {
+#nav-toggle:checked ~ #nav-header #nav-toggle-burger::before,
+#nav-toggle:checked ~ #nav-header #nav-toggle-burger::after {
     width: 16px;
     background: var(--navbar-light-secondary);
     transform: translate(0, 0) rotate(0deg);
 }
 
-&~#nav-content 
+#nav-toggle:checked ~ #nav-content 
 .nav-button 
 span {
     opacity: 0;
     transform: opacity .1s;
 }
-.fas{
+#nav-toggle:checked .nav-button .fas{
     min-width: calc(100% - 16px);
 }
 
