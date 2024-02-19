@@ -1,34 +1,64 @@
-:rooryt{
-    --background:#9c88ff;
-    --navbar-width:256px;
-    --navbar-width-min:80PX;
-    --navbar-dark-primary:#18283b;
-    --navbar-dark-secondary:#2c3e50;
-    --navbar-light-primary:#f5f6fa;
-    --navbar-light-secondary:#8292a5;
+:rooryt {
+    --background: #9c88ff;
+    --navbar-width: 256px;
+    --navbar-width-min: 80PX;
+    --navbar-dark-primary: #18283b;
+    --navbar-dark-secondary: #2c3e50;
+    --navbar-light-primary: #f5f6fa;
+    --navbar-light-secondary: #8292a5;
 
 }
 
-html, body{
+html,
+body {
     margin: 0;
     background: var(--background);
 }
 
-#nav-toggle:checked & ~ #nav-header{
+#nav-toggle:checked &~#nav-header {
     width: calc(var(--navbar-width-min)) -16px;
 }
 
-& ~ #nav-content, & ~ #nav-footer{
+&~#nav-content,
+&~#nav-footer {
     width: var(--navbar-width-min);
 }
 
-& ~ #nav-header #nav-title{
-opacity: 0;
-pointer-events: none;
-transition: opacity .1s;
-} 
+&~#nav-header #nav-title {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .1s;
+}
 
-label[for="nav-toggle"]{
+label[for="nav-toggle"] {
     left: calc(50% - 8px);
     transform: translate(-50%);
 }
+
+#nav-toggle-burger {
+    background: var(--navbar-light-primary);
+}
+
+&:before,
+&:after {
+    width: 16px;
+    background: var(--navbar-light-secondary);
+    transform: translate(0, 0) rotate(0deg);
+}
+
+&~#nav-content 
+.nav-button 
+span {
+    opacity: 0;
+    transform: opacity .1s;
+}
+.fas{
+    min-width: calc(100% - 16px);
+}
+
+& ~ #nav-footer #nav-footer-avatar{
+    margin-left: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+#nav-footer-titlebox, label
