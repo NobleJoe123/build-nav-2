@@ -53,12 +53,13 @@ span {
     min-width: calc(100% - 16px);
 }
 
-& ~ #nav-footer #nav-footer-avatar{
+#nav-toggle:checked ~ #nav-footer #nav-footer-avatar{
     margin-left: 0;
     left: 50%;
     transform: translate(-50%);
 }
-#nav-footer-titlebox, label[form="nav-footer-toggle"]{
+#nav-toggle:checked ~ #nav-footer #nav-footer-titlebox, #nav-toggle:checked ~ #nav-footer
+label[form="nav-footer-toggle"]{
     opacity: 0;
     transition: opacity .1s;
     pointer-events: none;
@@ -75,7 +76,7 @@ span {
     user-select: none;
     
 }
-hr{
+#nav-bar hr{
     margin: 0;
     position: relative;
     left: 16px;
@@ -84,11 +85,11 @@ hr{
     border-top: solid 1px var(--navbar-dark-secondary);
 }
 
-a{
+#nav-bar a{
     color: inherit;
     text-decoration: inherit;
 }
-input[type="checkbox"]{
+#nav-bar input[type="checkbox"]{
     display: none;
 }
 
