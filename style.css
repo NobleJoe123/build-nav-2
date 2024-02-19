@@ -27,3 +27,8 @@ opacity: 0;
 pointer-events: none;
 transition: opacity .1s;
 } 
+
+label[for="nav-toggle"]{
+    left: calc(50% - 8px);
+    transform: translate(-50%);
+}
