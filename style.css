@@ -8,3 +8,22 @@
     --navbar-light-secondary:#8292a5;
 
 }
+
+html, body{
+    margin: 0;
+    background: var(--background);
+}
+
+#nav-toggle:checked & ~ #nav-header{
+    width: calc(var(--navbar-width-min)) -16px;
+}
+
+& ~ #nav-content, & ~ #nav-footer{
+    width: var(--navbar-width-min);
+}
+
+& ~ #nav-header #nav-title{
+opacity: 0;
+pointer-events: none;
+transition: opacity .1s;
+} 
