@@ -105,7 +105,7 @@ label[form="nav-footer-toggle"]{
     transition: width .2s;
 }
 
-hr{
+#nav-header hr{
 position: absolute;
 bottom: 0;
 }
@@ -135,7 +135,8 @@ label[for="nav-toggle"]{
     transition:var(--background .2s);
 }
 
-&:before, &:after{
+#nav-toggle-burger::before, 
+#nav-toggle-burger::after{
     content: '';
     position: absolute;
     top: -6px;
@@ -147,7 +148,7 @@ label[for="nav-toggle"]{
     transition: .2s;
 }
 
-&::after{
+#nav-toggle-burger::after{
     top: 6px;
     transform: translate(-30deg);
 }
@@ -165,18 +166,18 @@ label[for="nav-toggle"]{
     transition: width .2s;
 }
 
-&::-webkit-scrollbar{
+#nav-content::-webkit-scrollbar{
     width: 8px;
     height: 8px;
 }
 
-&::-webkit-scrollbar-thumb{
+#nav-content::-webkit-scrollbar-thumb{
     border-radius: 99px;
     background-color: #D62929;
 
 }
 
-&::-webkit-scrollbar-button{
+#nav-content::-webkit-scrollbar-button{
     height: 16px;
 }
 
