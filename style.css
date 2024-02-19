@@ -78,3 +78,11 @@ span {
     user-select: none;
     
 }
+hr{
+    margin: 0;
+    position: relative;
+    left: 16px;
+    width: calc(100% - 32px);
+    border: none;
+    border-top: solid 1px var(--navbar-dark-secondary);
+}
